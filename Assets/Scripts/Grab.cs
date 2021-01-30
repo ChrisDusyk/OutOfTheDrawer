@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Grab : MonoBehaviour
 	public Camera _camera;
 
 	private Grabbable _grabbed;
+
+	private PhysicMaterial _oldMaterial;
 
 	private Vector3 _startPosition;
 
@@ -26,7 +29,7 @@ public class Grab : MonoBehaviour
 			RaycastHit hit;
 			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out hit) && hit.rigidbody != null)
+			if (Physics.Raycast(ray, out hit, Single.MaxValue, ~LayerMask.GetMask("MouseColliders")) && hit.rigidbody != null)
 			{
 				_grabbed = hit.transform.GetComponent<Grabbable>();
 
@@ -35,6 +38,8 @@ public class Grab : MonoBehaviour
 				_offset = hit.transform.position - hit.point;
 
 				_grabbed.Rigidbody.freezeRotation = true;
+				_oldMaterial = _grabbed.Collider.material;
+				_grabbed.Collider.material = _grabbed.WhenGrabbed;
 			}
 		}
 		else if (_grabbed != null)
@@ -42,6 +47,8 @@ public class Grab : MonoBehaviour
 			if (Input.GetMouseButtonUp(0))
 			{
 				_grabbed.Rigidbody.freezeRotation = false;
+				_grabbed.Collider.material = _oldMaterial;
+				_oldMaterial = null;
 				_grabbed = null;
 			}
 			else
@@ -51,7 +58,14 @@ public class Grab : MonoBehaviour
 
 				if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
 				{
-					var targetPosition = mouseRay.GetPoint(distance) + _offset;
+					RaycastHit hit;
+					Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+
+					Vector3 targetPosition;
+					if (Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")))
+						targetPosition = hit.point + _offset;
+					else
+						targetPosition = mouseRay.GetPoint(distance) + _offset;
 
 					var delta = targetPosition - _grabbed.transform.position;
 
@@ -59,7 +73,7 @@ public class Grab : MonoBehaviour
 
 					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
 
-					_grabbed.Rigidbody.AddForce(deltaVelocity, ForceMode.Impulse);
+					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
 				}
 			}
 		}

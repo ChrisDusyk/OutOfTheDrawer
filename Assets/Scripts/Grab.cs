@@ -8,7 +8,9 @@ public class Grab : MonoBehaviour
 
 	private Grabbable _grabbed;
 
-	private bool _previousMouseDown;
+	private Vector3 _startPosition;
+
+	private Vector3 _offset;
 
     // Start is called before the first frame update
     void Start()
@@ -19,23 +21,43 @@ public class Grab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		var mouseDown = Input.GetMouseButtonDown(0);
-
-		if (!_previousMouseDown && mouseDown)
+		if (Input.GetMouseButtonDown(0))
 		{
 			RaycastHit hit;
 			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out hit))
+			if (Physics.Raycast(ray, out hit) && hit.rigidbody != null)
+			{
 				_grabbed = hit.transform.GetComponent<Grabbable>();
-		}
-		else if (mouseDown && _grabbed != null)
-		{
-			_grabbed.transform.position += new Vector3(0, 0.01f, 0);
-		}	
-		else if (_previousMouseDown && !mouseDown)
-			_grabbed = null;
 
-		_previousMouseDown = mouseDown;
+				_startPosition = hit.point;
+
+				_offset = hit.transform.position - hit.point;
+
+				_grabbed.Rigidbody.freezeRotation = true;
+			}
+		}
+		else if (_grabbed != null)
+		{
+			if (Input.GetMouseButtonUp(0))
+			{
+				_grabbed.Rigidbody.freezeRotation = false;
+				_grabbed = null;
+			}
+			else
+			{
+				var mousePosition = Input.mousePosition;
+				var mouseRay = _camera.ScreenPointToRay(mousePosition);
+
+				if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
+				{
+					var targetPosition = mouseRay.GetPoint(distance) + _offset;
+
+					var delta = targetPosition - _grabbed.transform.position;
+
+					_grabbed.Rigidbody.AddForce(delta, ForceMode.Impulse);
+				}
+			}
+		}
 	}
 }

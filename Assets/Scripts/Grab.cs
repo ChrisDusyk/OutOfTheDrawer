@@ -29,7 +29,7 @@ public class Grab : MonoBehaviour
 			RaycastHit hit;
 			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out hit, Single.MaxValue, ~LayerMask.GetMask("MouseColliders")) && hit.rigidbody != null)
+			if (Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("GrabbableObjects")) && hit.rigidbody != null)
 			{
 				_grabbed = hit.transform.GetComponent<Grabbable>();
 
@@ -62,18 +62,23 @@ public class Grab : MonoBehaviour
 					Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
 					Vector3 targetPosition;
-					if (Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")))
+					if (_grabbed.RespectMouseColliders && Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")) && hit.distance < distance)
 						targetPosition = hit.point + _offset;
 					else
 						targetPosition = mouseRay.GetPoint(distance) + _offset;
 
-					var delta = targetPosition - _grabbed.transform.position;
+					if (_grabbed.Rigidbody.isKinematic)
+						_grabbed.transform.position = targetPosition;
+					else
+					{
+						var delta = targetPosition - _grabbed.transform.position;
 
-					var targetVelocity = delta * 20.0f;
+						var targetVelocity = delta * 20.0f;
 
-					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
+						var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
 
-					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
+						_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
+					}
 				}
 			}
 		}

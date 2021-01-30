@@ -8,6 +8,8 @@ public class Grabbable : MonoBehaviour
 
 	public Collider Collider { get; private set; }
 
+	public bool RespectMouseColliders = true;
+
 	public PhysicMaterial WhenGrabbed;
 
     // Start is called before the first frame update

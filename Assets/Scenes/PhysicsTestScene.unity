@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.05276918, g: 0.038816724, b: 0.028885752, a: 1}
+  m_IndirectSpecularColor: {r: 0.052673914, g: 0.038741134, b: 0.028816186, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &10400094
@@ -284,6 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &32176659
@@ -412,6 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &45694122
@@ -540,6 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &90963476
@@ -668,6 +676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &129024606
@@ -840,6 +850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &136414197
@@ -968,6 +980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &156748334
@@ -1312,6 +1326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &217374036
@@ -1440,6 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &286681628
@@ -1568,6 +1586,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &308008590
@@ -1809,6 +1829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &325803134
@@ -1937,6 +1959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &345007293
@@ -2157,6 +2181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &477776228
@@ -2285,6 +2311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &521323541
@@ -2413,6 +2441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &530211197
@@ -2541,6 +2571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &544690689
@@ -2669,6 +2701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &545158335
@@ -2797,6 +2831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &576580903
@@ -2925,6 +2961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &653020433
@@ -3053,6 +3091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &658421641
@@ -3181,6 +3221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &660545175
@@ -3309,6 +3351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &692653195
@@ -3437,6 +3481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &705858237
@@ -3642,6 +3688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!54 &718795143
@@ -3693,6 +3741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &791721295
@@ -3821,6 +3871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &794047594
@@ -3949,6 +4001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &796069658
@@ -4121,6 +4175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &856754576
@@ -4352,6 +4408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &965597392
@@ -4480,6 +4538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &967039380
@@ -4608,6 +4668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1003475614
@@ -4736,6 +4798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1032317677
@@ -4864,6 +4928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1036930683
@@ -4992,6 +5058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1097384499
@@ -5120,6 +5188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1109668920
@@ -5248,6 +5318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1115383959
@@ -5376,6 +5448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: 0, y: 0, z: -8}
+  MaximumOffset: {x: 0, y: 0, z: 0}
   RespectMouseColliders: 0
   WhenGrabbed: {fileID: 0}
 --- !u!65 &1120815898
@@ -5516,6 +5590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1140793593
@@ -5644,6 +5720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1149970761
@@ -5772,6 +5850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1202157552
@@ -5900,6 +5980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1209176751
@@ -6124,6 +6206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1242595803
@@ -6252,6 +6336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1274125426
@@ -6380,6 +6466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1310259112
@@ -6508,6 +6596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1315274838
@@ -6636,6 +6726,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1325142013
@@ -6764,6 +6856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1342852193
@@ -6892,6 +6986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1351917989
@@ -7064,6 +7160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1381767048
@@ -7192,6 +7290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1384718918
@@ -7364,6 +7464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1396155362
@@ -7632,6 +7734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1465341379
@@ -7760,6 +7864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1471321607
@@ -7888,6 +7994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1561768974
@@ -8016,6 +8124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1586850072
@@ -8144,6 +8254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1604305505
@@ -8272,6 +8384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1624370372
@@ -8444,6 +8558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1660870981
@@ -8668,6 +8784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1692566352
@@ -8796,6 +8914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1755906001
@@ -8924,6 +9044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1788604092
@@ -9193,7 +9315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: 0, y: 20, z: -10}
+  m_LocalPosition: {x: 0, y: 25, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9346,6 +9468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1836590279
@@ -9474,6 +9598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1847261003
@@ -9602,6 +9728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1860848590
@@ -9774,6 +9902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1901782185
@@ -9902,6 +10032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1904190427
@@ -10030,6 +10162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1913117909
@@ -10158,6 +10292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1932044475
@@ -10286,6 +10422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1935827163
@@ -10414,6 +10552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1939811950
@@ -10542,6 +10682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1940832405
@@ -10670,6 +10812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &1971552236
@@ -10843,6 +10987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &2074546738
@@ -10971,6 +11117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7237c0af27649b4bba19aa13c218a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MinimumOffset: {x: -1000000, y: -1000000, z: -1000000}
+  MaximumOffset: {x: 1000000, y: 1000000, z: 1000000}
   RespectMouseColliders: 1
   WhenGrabbed: {fileID: 13400000, guid: 7b91e219e9a7600499348bcf4c8bc814, type: 2}
 --- !u!65 &2087786075

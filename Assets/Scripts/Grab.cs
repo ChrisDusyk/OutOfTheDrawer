@@ -55,7 +55,11 @@ public class Grab : MonoBehaviour
 
 					var delta = targetPosition - _grabbed.transform.position;
 
-					_grabbed.Rigidbody.AddForce(delta, ForceMode.Impulse);
+					var targetVelocity = delta * 20.0f;
+
+					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
+
+					_grabbed.Rigidbody.AddForce(deltaVelocity, ForceMode.Impulse);
 				}
 			}
 		}

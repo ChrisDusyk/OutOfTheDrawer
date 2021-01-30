@@ -16,11 +16,11 @@ MonoBehaviour:
   m_RenderPipelineRayTracingResources: {fileID: 0}
   m_DefaultVolumeProfile: {fileID: 11400000, guid: f940a8037e6cda542891dc1aac1fa4e8, type: 2}
   m_LensAttenuation: 0
-  m_DefaultLookDevProfile: {fileID: 0}
+  m_DefaultLookDevProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02, type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 72198262773251917
-      data2: 13763000468760363032
+      data1: 72127894029074253
+      data2: 13763000466612879384
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -78,8 +78,8 @@ MonoBehaviour:
     lightLayerName3: Light Layer 3
     lightLayerName4: Light Layer 4
     lightLayerName5: Light Layer 5
-    lightLayerName6: Light Layer 6
-    lightLayerName7: Light Layer 7
+    lightLayerName6: LightObjects
+    lightLayerName7: LightRoom
     supportDistortion: 1
     supportTransparentBackface: 1
     supportTransparentDepthPrepass: 1
@@ -302,7 +302,9 @@ MonoBehaviour:
   availableMaterialQualityLevels: -1
   m_DefaultMaterialQualityLevel: 4
   diffusionProfileSettings: {fileID: 0}
-  diffusionProfileSettingsList: []
+  diffusionProfileSettingsList:
+  - {fileID: 11400000, guid: 102970473d83e534b8fe101ce84765e3, type: 2}
+  - {fileID: 11400000, guid: b8bbff515d0325d49948d5d2c67ecef3, type: 2}
   beforeTransparentCustomPostProcesses: []
   beforeTAACustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []

@@ -17,15 +17,15 @@ public class Grab : MonoBehaviour
 
 	private Vector3 _offset;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
 		if (Input.GetMouseButtonDown(0))
 		{
 			RaycastHit hit;
@@ -54,15 +54,26 @@ public class Grab : MonoBehaviour
 				_oldMaterial = null;
 				_grabbed = null;
 			}
-			else
-			{
-				var mousePosition = Input.mousePosition;
-				var mouseRay = _camera.ScreenPointToRay(mousePosition);
+		}
+	}
 
-				if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
-				{
-					RaycastHit hit;
-					Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+	void FixedUpdate()
+	{
+		if (_grabbed != null)
+		{
+			var mousePosition = Input.mousePosition;
+			var mouseRay = _camera.ScreenPointToRay(mousePosition);
+
+			if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
+			{
+				RaycastHit hit;
+				Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+
+				Vector3 targetPosition;
+				if (_grabbed.RespectMouseColliders && Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")) && hit.distance < distance)
+					targetPosition = hit.point + _offset;
+				else
+					targetPosition = mouseRay.GetPoint(distance) + _offset;
 
 				if (_grabbed.Rigidbody.isKinematic)
 					_grabbed.Rigidbody.MovePosition(targetPosition);

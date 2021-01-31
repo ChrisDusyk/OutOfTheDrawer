@@ -21,7 +21,7 @@ public class StartGame : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			_cameraPosition.SetLocation(CameraPosition.Location.WhiskyDrawer);
+			_cameraPosition.SetLocation(CameraPosition.Location.StationaryDrawer);
 			_objectToEnable.SetActive(true);
 			_uiToEnable.SetActive(true);
 

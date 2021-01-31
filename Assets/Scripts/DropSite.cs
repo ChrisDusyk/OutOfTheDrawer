@@ -29,6 +29,8 @@ public class DropSite : MonoBehaviour
 
 	public TMP_Text Text;
 
+	private bool _completed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,13 +76,19 @@ public class DropSite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Z))
+		if (!_completed && Input.GetKeyDown(KeyCode.Z))
 			Complete();
 
 		if (_complete)
 		{
-			_objectToEnableAfterDialogue?.SetActive(true);
-			_uiToEnableAfterDialogue?.SetActive(true);
+			_complete = false;
+			_completed = true;
+
+			if (_objectToEnableAfterDialogue != null)
+				_objectToEnableAfterDialogue.SetActive(true);
+			if (_uiToEnableAfterDialogue != null)
+				_uiToEnableAfterDialogue.SetActive(true);
+
 			CameraPosition.SetLocation(CameraLocationAfterDialogue);
 
 			enabled = false;

@@ -13,6 +13,7 @@ public class StartGame : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		_cameraPosition.SetLocation(CameraPosition.Location.AtFan);
 	}
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class StartGame : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			_cameraPosition.SetLocation(CameraPosition.Location.WhiskyDrawer);
+			_cameraPosition.SetLocation(CameraPosition.Location.AcrossRoom);
 			_objectToEnable.SetActive(true);
 			_uiToEnable.SetActive(true);
 

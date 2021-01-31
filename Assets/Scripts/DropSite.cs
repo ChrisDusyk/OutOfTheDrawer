@@ -13,7 +13,19 @@ public class DropSite : MonoBehaviour
 
 	public bool Completed => _remainingNames.Count == 0;
 
-	public GameObject PrefabTrigger;
+	public CameraPosition CameraPosition;
+
+	public DialogueWindow DialogueOnComplete;
+
+	public CameraPosition.Location CameraLocationOnComplete;
+
+	public GameObject _objectToDisableOnComplete;
+
+	public GameObject _objectToEnableAfterDialogue;
+
+	public GameObject _uiToEnableAfterDialogue;
+
+	public CameraPosition.Location CameraLocationAfterDialogue;
 
 	public TMP_Text Text;
 
@@ -24,6 +36,8 @@ public class DropSite : MonoBehaviour
 		Text.text = String.Join("\r\n", _remainingNames);
 	}
 
+	private bool _complete;
+
 	public bool TryDrop(string name)
 	{
 		if (_remainingNames.Remove(name))
@@ -32,10 +46,13 @@ public class DropSite : MonoBehaviour
 
 			if (Completed)
 			{
-				gameObject.SetActive(false);
+				gameObject.GetComponent<CanvasRenderer>().SetAlpha(0);
 
-				var newObject = Instantiate(PrefabTrigger);
-				newObject.transform.parent = transform;
+				_objectToDisableOnComplete.SetActive(false);
+
+				CameraPosition.SetLocation(CameraLocationOnComplete);
+
+				DialogueOnComplete.TriggerAnimation(() => _complete = true);
 			}
 
 			return true;
@@ -47,5 +64,13 @@ public class DropSite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (_complete)
+		{
+			_complete = false;
+
+			_objectToEnableAfterDialogue.SetActive(true);
+			_uiToEnableAfterDialogue.SetActive(true);
+			CameraPosition.SetLocation(CameraLocationAfterDialogue);
+		}
     }
 }

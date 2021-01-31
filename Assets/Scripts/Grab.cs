@@ -15,15 +15,15 @@ public class Grab : MonoBehaviour
 
 	private Vector3 _offset;
 
-	// Start is called before the first frame update
-	void Start()
-	{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
+    // Update is called once per frame
+    void Update()
+    {
 		if (Input.GetMouseButtonDown(0))
 		{
 			RaycastHit hit;
@@ -51,56 +51,34 @@ public class Grab : MonoBehaviour
 				_oldMaterial = null;
 				_grabbed = null;
 			}
-		}
-	}
-
-	void FixedUpdate()
-	{
-		if (_grabbed != null)
-		{
-			var mousePosition = Input.mousePosition;
-			var mouseRay = _camera.ScreenPointToRay(mousePosition);
-
-			if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
+			else
 			{
-				RaycastHit hit;
-				Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+				var mousePosition = Input.mousePosition;
+				var mouseRay = _camera.ScreenPointToRay(mousePosition);
 
-				Vector3 targetPosition;
-				if (_grabbed.RespectMouseColliders && Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")) && hit.distance < distance)
-					targetPosition = hit.point + _offset;
-				else
-					targetPosition = mouseRay.GetPoint(distance) + _offset;
-
-				if (targetPosition.x < _grabbed.StartPosition.x + _grabbed.MinimumOffset.x)
-					targetPosition.x = _grabbed.StartPosition.x + _grabbed.MinimumOffset.x;
-
-				if (targetPosition.x > _grabbed.StartPosition.x + _grabbed.MaximumOffset.x)
-					targetPosition.x = _grabbed.StartPosition.x + _grabbed.MaximumOffset.x;
-
-				if (targetPosition.y < _grabbed.StartPosition.y + _grabbed.MinimumOffset.y)
-					targetPosition.y = _grabbed.StartPosition.y + _grabbed.MinimumOffset.y;
-
-				if (targetPosition.y > _grabbed.StartPosition.y + _grabbed.MaximumOffset.y)
-					targetPosition.y = _grabbed.StartPosition.y + _grabbed.MaximumOffset.y;
-
-				if (targetPosition.z < _grabbed.StartPosition.z + _grabbed.MinimumOffset.z)
-					targetPosition.z = _grabbed.StartPosition.z + _grabbed.MinimumOffset.z;
-
-				if (targetPosition.z > _grabbed.StartPosition.z + _grabbed.MaximumOffset.z)
-					targetPosition.z = _grabbed.StartPosition.z + _grabbed.MaximumOffset.z;
-
-				if (_grabbed.Rigidbody.isKinematic)
-					_grabbed.Rigidbody.MovePosition(targetPosition);
-				else
+				if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
 				{
-					var delta = targetPosition - _grabbed.transform.position;
+					RaycastHit hit;
+					Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-					var targetVelocity = delta * 20.0f;
+					Vector3 targetPosition;
+					if (_grabbed.RespectMouseColliders && Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("MouseColliders")) && hit.distance < distance)
+						targetPosition = hit.point + _offset;
+					else
+						targetPosition = mouseRay.GetPoint(distance) + _offset;
 
-					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
+					if (_grabbed.Rigidbody.isKinematic)
+						_grabbed.transform.position = targetPosition;
+					else
+					{
+						var delta = targetPosition - _grabbed.transform.position;
 
-					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
+						var targetVelocity = delta * 20.0f;
+
+						var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
+
+						_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
+					}
 				}
 			}
 		}

@@ -9,6 +9,15 @@ public class DialogueWindow : MonoBehaviour
 	public TMP_Text Text;
 	public AudioSource AudioSource;
 
+	private Animator _animator;
+
+	private System.Action _callbackAction;
+
+	public void Start()
+	{
+		_animator = gameObject.GetComponent<Animator>();
+	}
+
 	public void DisplayDialogueText(string text)
 	{
 		Text.SetText(text);
@@ -17,5 +26,16 @@ public class DialogueWindow : MonoBehaviour
 	public void TriggerAudioClip(AudioClip audio)
 	{
 		AudioSource.PlayOneShot(audio);
+	}
+
+	public void TriggerAnimation(System.Action callbackAction)
+	{
+		_callbackAction = callbackAction;
+		_animator.SetTrigger("StartAnimation");
+	}
+
+	public void EndAnimation()
+	{
+		_callbackAction();
 	}
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1330060851548579716
+--- !u!1 &8895327263010251280
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1330060851548579715}
-  - component: {fileID: 1330060851548579717}
-  - component: {fileID: 1330060851548579714}
+  - component: {fileID: 8895327263010251293}
+  - component: {fileID: 8895327263010251294}
+  - component: {fileID: 8895327263010251295}
   m_Layer: 0
-  m_Name: WhiskyDialogue
+  m_Name: Epiloque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1330060851548579715
+--- !u!4 &8895327263010251293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330060851548579716}
+  m_GameObject: {fileID: 8895327263010251280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8536774991268983707}
+  - {fileID: 2269649112650048379}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1330060851548579717
+--- !u!114 &8895327263010251294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895327263010251280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b809d8c0f83ec046990ed96ea99d086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 2269649112210175902}
+  AudioSource: {fileID: 0}
+--- !u!95 &8895327263010251295
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330060851548579716}
+  m_GameObject: {fileID: 8895327263010251280}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c9f9abb622e75f7409d74045f1b30c5f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 057a13d6d3167f94eb4f6968bec5b3dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -52,26 +66,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1330060851548579714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330060851548579716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b809d8c0f83ec046990ed96ea99d086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 8536774989831907198}
-  AudioSource: {fileID: 0}
---- !u!1001 &1330060852246206743
+--- !u!1001 &8895327264032819703
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1330060851548579715}
+    m_TransformParent: {fileID: 8895327263010251293}
     m_Modifications:
     - target: {fileID: 7209670176093989516, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
       propertyPath: m_Pivot.x
@@ -161,46 +161,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7209670176862076521, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7209670176862076521, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7209670176931032888, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7209670176931032888, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7209670176931032888, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7209670176931032888, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7209670176931032895, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7209670176931032890, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
---- !u!224 &8536774991268983707 stripped
+--- !u!224 &2269649112650048379 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7209670176093989516, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-  m_PrefabInstance: {fileID: 1330060852246206743}
+  m_PrefabInstance: {fileID: 8895327264032819703}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8536774989831907198 stripped
+--- !u!114 &2269649112210175902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7209670176862076521, guid: 6c6566d57ca7c634cbcd798e9d70c09a, type: 3}
-  m_PrefabInstance: {fileID: 1330060852246206743}
+  m_PrefabInstance: {fileID: 8895327264032819703}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

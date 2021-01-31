@@ -6,57 +6,16 @@ using TMPro;
 
 public class DialogueWindow : MonoBehaviour
 {
-	private const string ALPHA_CODE = "<color=#00000000>";
-
 	public TMP_Text Text;
-	private string[] _allDialogue;
+	public AudioSource AudioSource;
 
-	CanvasGroup Group;
-
-	void Start()
+	public void DisplayDialogueText(string text)
 	{
-		Group = GetComponent<CanvasGroup>();
-		Group.alpha = 0;
+		Text.SetText(text);
 	}
 
-	public void Show(string[] text)
+	public void TriggerAudioClip(AudioClip audio)
 	{
-		Group.alpha = 1;
-		_allDialogue = text;
-		StartCoroutine(DisplayText());
-	}
-
-	public void Close()
-	{
-		StopAllCoroutines();
-		Group.alpha = 0;
-	}
-
-	private IEnumerator DisplayText()
-	{
-		foreach (var dialogue in _allDialogue)
-		{
-			Text.text = "";
-
-			var originalText = dialogue;
-			var displayedText = string.Empty;
-			var alphaIndex = 0;
-
-			foreach (var c in originalText.ToCharArray())
-			{
-				++alphaIndex;
-				Text.text = originalText;
-				displayedText = Text.text.Insert(alphaIndex, ALPHA_CODE);
-				Text.text = displayedText;
-
-				yield return new WaitForSecondsRealtime(0.03f);
-			}
-
-			yield return new WaitForSecondsRealtime(1f);
-		}
-
-		Group.alpha = 0;
-
-		yield return null;
+		AudioSource.PlayOneShot(audio);
 	}
 }

@@ -6,19 +6,25 @@ public class StartGame : MonoBehaviour
 {
 	public CameraPosition _cameraPosition;
 
-	public GameObject _startPrefab;
+	public GameObject _objectToEnable;
 
-    // Start is called before the first frame update
-    void Start()
+	public GameObject _uiToEnable;
+
+	// Start is called before the first frame update
+	void Start()
     {
-		_cameraPosition.SetLocation(CameraPosition.Location.AcrossRoom);
-		var prefab = Instantiate(_startPrefab);
-		prefab.transform.parent = transform.parent;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			_cameraPosition.SetLocation(CameraPosition.Location.WhiskyDrawer);
+			_objectToEnable.SetActive(true);
+			_uiToEnable.SetActive(true);
+
+			gameObject.SetActive(false);
+		}
+	}
 }

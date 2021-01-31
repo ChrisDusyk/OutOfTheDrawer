@@ -7,13 +7,15 @@ public class CameraPosition : MonoBehaviour
 	public enum Location
 	{
 		AcrossRoom,
-		DeskDrawer
+		WhiskyDrawer,
+		StationaryDrawer
 	}
 
 	private Dictionary<Location, (Vector3 position, Vector3 rotation)> _locations = new Dictionary<Location, (Vector3 position, Vector3 rotation)>()
 	{
 		{ Location.AcrossRoom, (new Vector3(1.0f, 1.5f, 2.3f), new Vector3(10.0f, -150.0f, 0.0f)) },
-		{ Location.DeskDrawer, (new Vector3(0.747f, 1.211f, -1.447f), new Vector3(60.0f, 0.0f, 0.0f)) }
+		{ Location.WhiskyDrawer, (new Vector3(0.747f, 1.211f, -1.447f), new Vector3(60.0f, 0.0f, 0.0f)) },
+		{ Location.StationaryDrawer, (new Vector3(-0.747f, 1.711f, -1.447f), new Vector3(60.0f, 0.0f, 0.0f)) }
 	};
 
 	public void SetLocation(Location location)

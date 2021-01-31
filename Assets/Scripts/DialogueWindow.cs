@@ -20,7 +20,7 @@ public class DialogueWindow : MonoBehaviour
 
 	public void DisplayDialogueText(string text)
 	{
-		Text.SetText(text);
+		Text.SetText(text.Replace("NEWLINE", System.Environment.NewLine));
 	}
 
 	public void TriggerAudioClip(AudioClip audio)

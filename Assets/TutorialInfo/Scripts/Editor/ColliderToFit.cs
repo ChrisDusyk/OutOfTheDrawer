@@ -44,12 +44,29 @@ public class ColliderToFit : MonoBehaviour
 				}
 				else if (collider is CapsuleCollider capsuleCollider)
 				{
-					capsuleCollider.center = bounds.center - rootGameObject.transform.position;
-					capsuleCollider.height = bounds.extents.y * 2.0f;
-					capsuleCollider.radius = Mathf.Max(bounds.extents.x, bounds.extents.z);
+					if (bounds.extents.x > bounds.extents.y && bounds.extents.x > bounds.extents.z)
+					{
+						capsuleCollider.direction = 0;
+						capsuleCollider.center = bounds.center - rootGameObject.transform.position;
+						capsuleCollider.height = bounds.extents.x * 2.0f;
+						capsuleCollider.radius = Mathf.Max(bounds.extents.y, bounds.extents.z);
+					}
+					else if (bounds.extents.y > bounds.extents.x && bounds.extents.y > bounds.extents.z)
+					{
+						capsuleCollider.direction = 1;
+						capsuleCollider.center = bounds.center - rootGameObject.transform.position;
+						capsuleCollider.height = bounds.extents.y * 2.0f;
+						capsuleCollider.radius = Mathf.Max(bounds.extents.x, bounds.extents.z);
+					}
+					else
+					{
+						capsuleCollider.direction = 2;
+						capsuleCollider.center = bounds.center - rootGameObject.transform.position;
+						capsuleCollider.height = bounds.extents.z * 2.0f;
+						capsuleCollider.radius = Mathf.Max(bounds.extents.x, bounds.extents.y);
+					}
 				}
 			}
 		}
 	}
-
 }

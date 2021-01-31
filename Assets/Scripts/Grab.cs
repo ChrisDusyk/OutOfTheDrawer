@@ -31,18 +31,21 @@ public class Grab : MonoBehaviour
 			RaycastHit hit;
 			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out hit, Single.MaxValue, LayerMask.GetMask("GrabbableObjects")) && hit.rigidbody != null)
+			if (Physics.Raycast(ray, out hit, Single.MaxValue, ~LayerMask.GetMask("MouseColliders")) && hit.rigidbody != null)
 			{
 				_grabbed = hit.transform.GetComponent<Grabbable>();
 
-				_startPosition = hit.point;
+				if (_grabbed != null)
+				{
+					_startPosition = hit.point;
 
-				_offset = hit.transform.position - hit.point;
+					_offset = hit.transform.position - hit.point;
 
-				_oldConstraints = _grabbed.Rigidbody.constraints;
-				_grabbed.Rigidbody.constraints &= RigidbodyConstraints.FreezeRotation;
-				_oldMaterial = _grabbed.Collider.material;
-				_grabbed.Collider.material = _grabbed.WhenGrabbed;
+					_oldConstraints = _grabbed.Rigidbody.constraints;
+					_grabbed.Rigidbody.constraints &= RigidbodyConstraints.FreezeRotation;
+					_oldMaterial = _grabbed.Collider.material;
+					_grabbed.Collider.material = _grabbed.WhenGrabbed;
+				}
 			}
 		}
 		else if (_grabbed != null)

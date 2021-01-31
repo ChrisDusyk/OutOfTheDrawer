@@ -79,11 +79,11 @@ public class DropSite : MonoBehaviour
 
 		if (_complete)
 		{
-			_complete = false;
-
 			_objectToEnableAfterDialogue?.SetActive(true);
 			_uiToEnableAfterDialogue?.SetActive(true);
 			CameraPosition.SetLocation(CameraLocationAfterDialogue);
+
+			enabled = false;
 		}
     }
 }

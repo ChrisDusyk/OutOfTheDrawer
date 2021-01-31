@@ -12,6 +12,8 @@ public class StartGame : MonoBehaviour
 
 	public GameObject _uiToEnable;
 
+	public GameObject _splashScreen;
+
 	private bool _running;
 	private bool _complete;
 
@@ -26,6 +28,8 @@ public class StartGame : MonoBehaviour
     {
 		if (!_running && Input.GetKeyDown(KeyCode.Space))
 		{
+			_splashScreen.SetActive(false);
+
 			_cameraPosition.SetLocation(CameraPosition.Location.AcrossRoom);
 
 			_dialogue.TriggerAnimation(() => _complete = true);

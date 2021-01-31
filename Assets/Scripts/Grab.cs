@@ -13,6 +13,8 @@ public class Grab : MonoBehaviour
 
 	private RigidbodyConstraints _oldConstraints;
 
+	private float _oldAngularDrag;
+
 	private Vector3 _startPosition;
 
 	private Vector3 _offset;
@@ -43,6 +45,8 @@ public class Grab : MonoBehaviour
 
 					_oldConstraints = _grabbed.Rigidbody.constraints;
 					_grabbed.Rigidbody.constraints &= RigidbodyConstraints.FreezeRotation;
+					_oldAngularDrag = _grabbed.Rigidbody.angularDrag;
+					_grabbed.Rigidbody.angularDrag = 10.0f;
 					_oldMaterial = _grabbed.Collider.material;
 					_grabbed.Collider.material = _grabbed.WhenGrabbed;
 				}
@@ -53,6 +57,7 @@ public class Grab : MonoBehaviour
 			if (Input.GetMouseButtonUp(0))
 			{
 				_grabbed.Rigidbody.constraints = _oldConstraints;
+				_grabbed.Rigidbody.angularDrag = _oldAngularDrag;
 				_grabbed.Collider.material = _oldMaterial;
 				_oldMaterial = null;
 				_grabbed = null;

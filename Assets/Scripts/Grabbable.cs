@@ -8,11 +8,6 @@ public class Grabbable : MonoBehaviour
 
 	public Collider Collider { get; private set; }
 
-	public Vector3 StartPosition { get; private set; }
-
-	public Vector3 MinimumOffset = new Vector3(-1000000, -1000000, -1000000);
-	public Vector3 MaximumOffset = new Vector3(1000000, 1000000, 1000000);
-
 	public bool RespectMouseColliders = true;
 
 	public PhysicMaterial WhenGrabbed;
@@ -22,7 +17,6 @@ public class Grabbable : MonoBehaviour
     {
 		Rigidbody = GetComponent<Rigidbody>();
 		Collider = GetComponent<Collider>();
-		StartPosition = transform.position;
     }
 
     // Update is called once per frame

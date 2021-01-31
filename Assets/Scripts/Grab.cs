@@ -1,13 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Grab : MonoBehaviour
 {
 	public Camera _camera;
 
 	private Grabbable _grabbed;
+
+	private Droppable _droppable;
 
 	private PhysicMaterial _oldMaterial;
 
@@ -18,6 +22,8 @@ public class Grab : MonoBehaviour
 	private Vector3 _startPosition;
 
 	private Vector3 _offset;
+
+	private DropSite _dropSite;
 
 	// Start is called before the first frame update
 	void Start()
@@ -49,6 +55,8 @@ public class Grab : MonoBehaviour
 					_grabbed.Rigidbody.angularDrag = 10.0f;
 					_oldMaterial = _grabbed.Collider.material;
 					_grabbed.Collider.material = _grabbed.WhenGrabbed;
+
+					_droppable = _grabbed.GetComponent<Droppable>();
 				}
 			}
 		}
@@ -56,11 +64,16 @@ public class Grab : MonoBehaviour
 		{
 			if (Input.GetMouseButtonUp(0))
 			{
+				if (_dropSite != null && _dropSite.TryDrop(_droppable.Name))
+					_grabbed.gameObject.SetActive(false);
+
 				_grabbed.Rigidbody.constraints = _oldConstraints;
 				_grabbed.Rigidbody.angularDrag = _oldAngularDrag;
 				_grabbed.Collider.material = _oldMaterial;
 				_oldMaterial = null;
 				_grabbed = null;
+				_droppable = null;
+				_dropSite = null;
 			}
 		}
 	}
@@ -70,6 +83,20 @@ public class Grab : MonoBehaviour
 		if (_grabbed != null)
 		{
 			var mousePosition = Input.mousePosition;
+
+			if (_droppable != null)
+			{
+				var eventData = new PointerEventData(EventSystem.current);
+				eventData.position = mousePosition;
+
+				var results = new List<RaycastResult>();
+				EventSystem.current.RaycastAll(eventData, results);
+
+				_dropSite = results.Select(result => result.gameObject.GetComponent<DropSite>()).FirstOrDefault(o => o != null);
+			}
+			else 
+				_dropSite = null;
+
 			var mouseRay = _camera.ScreenPointToRay(mousePosition);
 
 			if (new Plane(Vector3.up, _startPosition).Raycast(mouseRay, out var distance))
@@ -93,7 +120,7 @@ public class Grab : MonoBehaviour
 
 					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
 
-					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f * _grabbed.Rigidbody.mass, ForceMode.Impulse);
+					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 40.0f * _grabbed.Rigidbody.mass, ForceMode.Impulse);
 				}
 			}
 		}

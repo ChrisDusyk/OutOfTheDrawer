@@ -491,6 +491,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.083333336
+    functionName: TriggerAudioClip
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 4e5a8a26df153ea45b909c14a1757f1d, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 5.75
     functionName: DisplayDialogueText
     data: "I took a job investigating the sewage plant, don\u2019t know what I was

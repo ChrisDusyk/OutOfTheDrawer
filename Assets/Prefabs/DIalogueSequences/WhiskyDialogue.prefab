@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 8536774989831907198}
+  AudioSource: {fileID: 0}
 --- !u!1001 &1330060852246206743
 PrefabInstance:
   m_ObjectHideFlags: 0

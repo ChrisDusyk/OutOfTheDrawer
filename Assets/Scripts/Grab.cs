@@ -11,6 +11,8 @@ public class Grab : MonoBehaviour
 
 	private PhysicMaterial _oldMaterial;
 
+	private RigidbodyConstraints _oldConstraints;
+
 	private Vector3 _startPosition;
 
 	private Vector3 _offset;
@@ -37,7 +39,8 @@ public class Grab : MonoBehaviour
 
 				_offset = hit.transform.position - hit.point;
 
-				_grabbed.Rigidbody.freezeRotation = true;
+				_oldConstraints = _grabbed.Rigidbody.constraints;
+				_grabbed.Rigidbody.constraints &= RigidbodyConstraints.FreezeRotation;
 				_oldMaterial = _grabbed.Collider.material;
 				_grabbed.Collider.material = _grabbed.WhenGrabbed;
 			}
@@ -46,7 +49,7 @@ public class Grab : MonoBehaviour
 		{
 			if (Input.GetMouseButtonUp(0))
 			{
-				_grabbed.Rigidbody.freezeRotation = false;
+				_grabbed.Rigidbody.constraints = _oldConstraints;
 				_grabbed.Collider.material = _oldMaterial;
 				_oldMaterial = null;
 				_grabbed = null;
@@ -72,24 +75,6 @@ public class Grab : MonoBehaviour
 				else
 					targetPosition = mouseRay.GetPoint(distance) + _offset;
 
-				if (targetPosition.x < _grabbed.StartPosition.x + _grabbed.MinimumOffset.x)
-					targetPosition.x = _grabbed.StartPosition.x + _grabbed.MinimumOffset.x;
-
-				if (targetPosition.x > _grabbed.StartPosition.x + _grabbed.MaximumOffset.x)
-					targetPosition.x = _grabbed.StartPosition.x + _grabbed.MaximumOffset.x;
-
-				if (targetPosition.y < _grabbed.StartPosition.y + _grabbed.MinimumOffset.y)
-					targetPosition.y = _grabbed.StartPosition.y + _grabbed.MinimumOffset.y;
-
-				if (targetPosition.y > _grabbed.StartPosition.y + _grabbed.MaximumOffset.y)
-					targetPosition.y = _grabbed.StartPosition.y + _grabbed.MaximumOffset.y;
-
-				if (targetPosition.z < _grabbed.StartPosition.z + _grabbed.MinimumOffset.z)
-					targetPosition.z = _grabbed.StartPosition.z + _grabbed.MinimumOffset.z;
-
-				if (targetPosition.z > _grabbed.StartPosition.z + _grabbed.MaximumOffset.z)
-					targetPosition.z = _grabbed.StartPosition.z + _grabbed.MaximumOffset.z;
-
 				if (_grabbed.Rigidbody.isKinematic)
 					_grabbed.Rigidbody.MovePosition(targetPosition);
 				else
@@ -100,7 +85,7 @@ public class Grab : MonoBehaviour
 
 					var deltaVelocity = targetVelocity - _grabbed.Rigidbody.velocity;
 
-					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f, ForceMode.Impulse);
+					_grabbed.Rigidbody.AddForce(deltaVelocity * Time.deltaTime * 20.0f * _grabbed.Rigidbody.mass, ForceMode.Impulse);
 				}
 			}
 		}

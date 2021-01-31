@@ -45,15 +45,7 @@ public class DropSite : MonoBehaviour
 			Text.text = String.Join("\r\n", _remainingNames);
 
 			if (Completed)
-			{
-				gameObject.GetComponent<CanvasRenderer>().SetAlpha(0);
-
-				_objectToDisableOnComplete.SetActive(false);
-
-				CameraPosition.SetLocation(CameraLocationOnComplete);
-
-				DialogueOnComplete.TriggerAnimation(() => _complete = true);
-			}
+				Complete();
 
 			return true;
 		}
@@ -61,9 +53,30 @@ public class DropSite : MonoBehaviour
 		return false;
 	}
 
+	private void Complete()
+	{
+		gameObject.GetComponent<CanvasRenderer>().SetAlpha(0);
+		foreach (var canvas in gameObject.GetComponentsInChildren<CanvasRenderer>())
+			canvas.SetAlpha(0);
+
+		_objectToDisableOnComplete.SetActive(false);
+
+		CameraPosition.SetLocation(CameraLocationOnComplete);
+
+		DialogueOnComplete.TriggerAnimation(SetComplete);
+	}
+
+	private void SetComplete()
+	{
+		_complete = true;
+	}
+
     // Update is called once per frame
     void Update()
     {
+		if (Input.GetKeyDown(KeyCode.Z))
+			Complete();
+
 		if (_complete)
 		{
 			_complete = false;

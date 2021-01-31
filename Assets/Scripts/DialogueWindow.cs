@@ -52,7 +52,7 @@ public class DialogueWindow : MonoBehaviour
 				yield return new WaitForSecondsRealtime(0.03f);
 			}
 
-			yield return new WaitForSecondsRealtime(0.25f);
+			yield return new WaitForSecondsRealtime(1f);
 		}
 
 		Group.alpha = 0;

@@ -5181,6 +5181,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8895327263010251294, guid: bea992fab66f3aa4cb0214220119a2fc, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 1773915914}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bea992fab66f3aa4cb0214220119a2fc, type: 3}
 --- !u!1 &509116770 stripped
@@ -8555,11 +8559,11 @@ MonoBehaviour:
   ExpectedObjectNames: Whisky,Tumbler
   CameraPosition: {fileID: 2059096380}
   DialogueOnComplete: {fileID: 1609311804}
-  CameraLocationOnComplete: 1
+  CameraLocationOnComplete: 3
   _objectToDisableOnComplete: {fileID: 299693784}
   _objectToEnableAfterDialogue: {fileID: 1052935679}
   _uiToEnableAfterDialogue: {fileID: 1343612018}
-  CameraLocationAfterDialogue: 3
+  CameraLocationAfterDialogue: 4
   Text: {fileID: 1136844833}
 --- !u!1001 &956178167
 PrefabInstance:
@@ -9223,6 +9227,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8895327263010251293, guid: bea992fab66f3aa4cb0214220119a2fc, type: 3}
   m_PrefabInstance: {fileID: 504991022}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1022235920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8895327263010251294, guid: bea992fab66f3aa4cb0214220119a2fc, type: 3}
+  m_PrefabInstance: {fileID: 504991022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b809d8c0f83ec046990ed96ea99d086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1051337965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2098596709277231033, guid: eac4b7f3aa5b0d6419f409c4d86b1f54, type: 3}
@@ -11580,13 +11595,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpectedObjectNames: Revolver,Bullet,Bullet,Bullet
-  CameraPosition: {fileID: 0}
-  DialogueOnComplete: {fileID: 0}
-  CameraLocationOnComplete: 0
-  _objectToDisableOnComplete: {fileID: 0}
+  CameraPosition: {fileID: 2059096380}
+  DialogueOnComplete: {fileID: 1022235920}
+  CameraLocationOnComplete: 5
+  _objectToDisableOnComplete: {fileID: 1052935679}
   _objectToEnableAfterDialogue: {fileID: 0}
   _uiToEnableAfterDialogue: {fileID: 0}
-  CameraLocationAfterDialogue: 0
+  CameraLocationAfterDialogue: 5
   Text: {fileID: 493279690}
 --- !u!114 &1343612021
 MonoBehaviour:
@@ -18050,8 +18065,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059096375}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 1.147, y: 1.211, z: -1.447}
+  m_LocalRotation: {x: 0.05109533, y: 0.21614297, z: -0.011327561, w: 0.97495806}
+  m_LocalPosition: {x: 0.4, y: 1.4, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445217703}
@@ -18059,7 +18074,7 @@ Transform:
   - {fileID: 1773915915}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6, y: 25, z: 0}
 --- !u!114 &2059096379
 MonoBehaviour:
   m_ObjectHideFlags: 0

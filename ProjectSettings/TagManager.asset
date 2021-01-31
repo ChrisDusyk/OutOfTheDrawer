@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - LightObjects
+  - LightRoom
   - PostProcessing
   - Not in Reflection
   - GrabbableObjects

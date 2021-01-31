@@ -11,20 +11,10 @@ public class Game : MonoBehaviour
 	public void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha1))
-			WhiskyDialogue.TriggerAnimation(WhiskyEnded);
+			WhiskyDialogue.TriggerAnimation(() => Debug.Log("Whisky animation ended"));
 		else if (Input.GetKeyDown(KeyCode.Alpha2))
-			StationaryDialogue.TriggerAnimation(StationaryEnded);
+			StationaryDialogue.TriggerAnimation(() => Debug.Log("Stationary animation ended"));
 		else if (Input.GetKeyDown(KeyCode.Alpha3))
 			EpilogueDialogue.TriggerAnimation(() => Debug.Log("Epilogue Animation ended"));
-	}
-
-	private void StationaryEnded()
-	{
-		Debug.Log("Stationary Antimation ended");
-	}
-
-	private void WhiskyEnded()
-	{
-		Debug.Log("Animation ended");
 	}
 }

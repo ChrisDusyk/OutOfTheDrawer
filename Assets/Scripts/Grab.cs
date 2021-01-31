@@ -64,13 +64,8 @@ public class Grab : MonoBehaviour
 		{
 			if (Input.GetMouseButtonUp(0))
 			{
-				if (_dropSite != null && _dropSite.PrefabTrigger != null)
-				{
-					_dropSite.gameObject.SetActive(false);
-
-					var newObject = Instantiate(_dropSite.PrefabTrigger);
-					newObject.transform.parent = transform;
-				}
+				if (_dropSite != null && _dropSite.TryDrop(_droppable.Name))
+					_grabbed.gameObject.SetActive(false);
 
 				_grabbed.Rigidbody.constraints = _oldConstraints;
 				_grabbed.Rigidbody.angularDrag = _oldAngularDrag;
@@ -97,12 +92,7 @@ public class Grab : MonoBehaviour
 				var results = new List<RaycastResult>();
 				EventSystem.current.RaycastAll(eventData, results);
 
-				var dropSiteCandidate = results.Select(result => result.gameObject.GetComponent<DropSite>()).FirstOrDefault(o => o != null);
-
-				if (dropSiteCandidate != null && dropSiteCandidate.ExpectedObjectName == _droppable.Name)
-					_dropSite = dropSiteCandidate;
-				else
-					_dropSite = null;
+				_dropSite = results.Select(result => result.gameObject.GetComponent<DropSite>()).FirstOrDefault(o => o != null);
 			}
 			else 
 				_dropSite = null;
